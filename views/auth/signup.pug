@@ -7,7 +7,10 @@ html(lang="ja")
     include ../includes/header
     h2 Sign up
     form(action="/auth/signup", method="post")
-      input#name(type="text", name="name")
-      input#password(type="password", name="password")
-      input#password_confirmation(type="password", name="password_confirmation")
-      input(type="submit", value="Sign up")
+      input#name(type="text", name="name", placeholder="name")
+      br
+      input#password(type="password", name="password", placeholder="password")
+      br
+      input#password_confirmation(type="password_confirmation", name="password", placeholder="password_confirmation")
+      br
+      input(type="submit", value="Sign in", placeholder="password confirmation")
