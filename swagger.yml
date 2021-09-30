@@ -20,7 +20,7 @@ produces:
 securityDefinitions:
   Bearer:
     type: "apiKey"
-    name: "access_token"
+    name: "Authorization"
     in: "header"
 paths:
   /auth/signup:
