@@ -1,0 +1,13 @@
+doctype html
+html(lang="ja")
+  head
+    include ../includes/head
+    title Document
+  body
+    include ../includes/header
+    h2 Sign up
+    form(action="/auth/signup", method="post")
+      input#name(type="text", name="name")
+      input#password(type="password", name="password")
+      input#password_confirmation(type="password", name="password_confirmation")
+      input(type="submit", value="Sign up")
