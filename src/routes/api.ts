@@ -81,12 +81,12 @@ router.get("/user/me", isLoggedIn, (req, res) => {
 });
 
 function success(res: Response, data: any) {
-  res.json({ ok: true, error: null, data: data });
+  res.json(data);
 }
 
 function error(res: Response, status: number, error: any) {
   res.status(status);
-  res.json({ ok: false, error: error, data: null });
+  res.json(error);
 }
 
 export default router;
