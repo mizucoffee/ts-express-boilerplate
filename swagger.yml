@@ -53,55 +53,28 @@ paths:
           schema:
             type: "object"
             properties:
-              ok:
-                type: "boolean"
-                example: true
-              error:
-                type: "object"
-                example: null
-              data:
-                type: "object"
-                properties:
-                  access_token:
-                    type: "string"
-                    example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjMyOTkxMjY5LCJleHAiOjE2MzI5OTEzMjl9.IEPsJs74-fVDzsjzyXnWm6kZxfmVVXocFSoPpOrPez0"
-                  refresh_token:
-                    type: "string"
-                    example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsImlhdCI6MTYzMjk5MTI2OSwiZXhwIjoxNjM1NTgzMjY5fQ.yT0dge1rUrOxx4VNrwlMrHaQxjF2yuPyF51evhcihL4"
+              access_token:
+                type: "string"
+                example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjMyOTkxMjY5LCJleHAiOjE2MzI5OTEzMjl9.IEPsJs74-fVDzsjzyXnWm6kZxfmVVXocFSoPpOrPez0"
+              refresh_token:
+                type: "string"
+                example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsImlhdCI6MTYzMjk5MTI2OSwiZXhwIjoxNjM1NTgzMjY5fQ.yT0dge1rUrOxx4VNrwlMrHaQxjF2yuPyF51evhcihL4"
         400:
           description: "必須項目が空"
           schema:
             type: "object"
             properties:
-              ok:
-                type: "boolean"
-                example: false
-              error:
-                type: "object"
-                properties:
-                  message:
-                    type: "string"
-                    example: "invalid request"
-              data:
-                type: "object"
-                example: null
+              message:
+                type: "string"
+                example: "invalid request"
         409:
           description: "指定されたユーザ名が既に登録されている"
           schema:
             type: "object"
             properties:
-              ok:
-                type: "boolean"
-                example: false
-              error:
-                type: "object"
-                properties:
-                  message:
-                    type: "string"
-                    example: "already registered name"
-              data:
-                type: "object"
-                example: null
+              message:
+                type: "string"
+                example: "already registered name"
   /auth/signin:
     post:
       tags:
@@ -134,55 +107,28 @@ paths:
           schema:
             type: "object"
             properties:
-              ok:
-                type: "boolean"
-                example: true
-              error:
-                type: "object"
-                example: null
-              data:
-                type: "object"
-                properties:
-                  access_token:
-                    type: "string"
-                    example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjMyOTkxMjY5LCJleHAiOjE2MzI5OTEzMjl9.IEPsJs74-fVDzsjzyXnWm6kZxfmVVXocFSoPpOrPez0"
-                  refresh_token:
-                    type: "string"
-                    example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsImlhdCI6MTYzMjk5MTI2OSwiZXhwIjoxNjM1NTgzMjY5fQ.yT0dge1rUrOxx4VNrwlMrHaQxjF2yuPyF51evhcihL4"
+              access_token:
+                type: "string"
+                example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjMyOTkxMjY5LCJleHAiOjE2MzI5OTEzMjl9.IEPsJs74-fVDzsjzyXnWm6kZxfmVVXocFSoPpOrPez0"
+              refresh_token:
+                type: "string"
+                example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsImlhdCI6MTYzMjk5MTI2OSwiZXhwIjoxNjM1NTgzMjY5fQ.yT0dge1rUrOxx4VNrwlMrHaQxjF2yuPyF51evhcihL4"
         400:
           description: "必須項目が空"
           schema:
             type: "object"
             properties:
-              ok:
-                type: "boolean"
-                example: false
-              error:
-                type: "object"
-                properties:
-                  message:
-                    type: "string"
-                    example: "invalid request"
-              data:
-                type: "object"
-                example: null
+              message:
+                type: "string"
+                example: "invalid request"
         404:
           description: "アカウントが存在しない"
           schema:
             type: "object"
             properties:
-              ok:
-                type: "boolean"
-                example: false
-              error:
-                type: "object"
-                properties:
-                  message:
-                    type: "string"
-                    example: "not found"
-              data:
-                type: "object"
-                example: null
+              message:
+                type: "string"
+                example: "not found"
   /auth/token:
     post:
       tags:
@@ -209,38 +155,20 @@ paths:
           schema:
             type: "object"
             properties:
-              ok:
-                type: "boolean"
-                example: true
-              error:
-                type: "object"
-                example: null
-              data:
-                type: "object"
-                properties:
-                  access_token:
-                    type: "string"
-                    example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjMyOTkxMjY5LCJleHAiOjE2MzI5OTEzMjl9.IEPsJs74-fVDzsjzyXnWm6kZxfmVVXocFSoPpOrPez0"
-                  refresh_token:
-                    type: "string"
-                    example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsImlhdCI6MTYzMjk5MTI2OSwiZXhwIjoxNjM1NTgzMjY5fQ.yT0dge1rUrOxx4VNrwlMrHaQxjF2yuPyF51evhcihL4"
+              access_token:
+                type: "string"
+                example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiaWF0IjoxNjMyOTkxMjY5LCJleHAiOjE2MzI5OTEzMjl9.IEPsJs74-fVDzsjzyXnWm6kZxfmVVXocFSoPpOrPez0"
+              refresh_token:
+                type: "string"
+                example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoicmVmcmVzaF90b2tlbiIsImlhdCI6MTYzMjk5MTI2OSwiZXhwIjoxNjM1NTgzMjY5fQ.yT0dge1rUrOxx4VNrwlMrHaQxjF2yuPyF51evhcihL4"
         400:
           description: "リフレッシュトークンが正しくない"
           schema:
             type: "object"
             properties:
-              ok:
-                type: "boolean"
-                example: false
-              error:
-                type: "object"
-                properties:
-                  message:
-                    type: "string"
-                    example: "invalid refresh token"
-              data:
-                type: "object"
-                example: null
+              message:
+                type: "string"
+                example: "invalid refresh token"
   /user/me:
     get:
       tags:
@@ -256,38 +184,17 @@ paths:
           schema:
             type: "object"
             properties:
-              ok:
-                type: "boolean"
-                example: true
-              error:
-                type: "object"
-                example: null
-              data:
-                type: "object"
-                properties:
-                  user:
-                    type: "object"
-                    properties:
-                      id:
-                        type: "integer"
-                        example: 1
-                      name:
-                        type: "string"
-                        example: mizu
+              id:
+                type: "integer"
+                example: 1
+              name:
+                type: "string"
+                example: mizu
         401:
           description: "ログインされていない"
           schema:
             type: "object"
             properties:
-              ok:
-                type: "boolean"
-                example: false
-              error:
-                type: "object"
-                properties:
-                  message:
-                    type: "string"
-                    example: "unauthorized"
-              data:
-                type: "object"
-                example: null
+              message:
+                type: "string"
+                example: "unauthorized"
